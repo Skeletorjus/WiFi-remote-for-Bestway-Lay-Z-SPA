@@ -2,6 +2,7 @@
 
 As of version [3.2.0](https://github.com/visualapproach/WiFi-remote-for-Bestway-Lay-Z-SPA/releases/tag/v3.2.0) the spa is automatically added as a device in Home Assistant by [MQTT discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
 The YAML-files included in this directory consists of optional sensors, automations, and ideas that are not exposed by default.
+
 The [build instructions](https://github.com/visualapproach/WiFi-remote-for-Bestway-Lay-Z-SPA/blob/master/Build-instructions-Bestway-WiFi-remote.pdf) contains an overview of the available MQTT topics.
 
 # Instructions
