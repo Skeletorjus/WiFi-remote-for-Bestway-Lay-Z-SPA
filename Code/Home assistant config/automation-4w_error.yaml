@@ -1,10 +1,12 @@
+# Only for use with the 4-wire models to track pump ERROR.
+
 automation:
   - id: 'spa error notify'
-    alias: spa error warning
+    alias: Layzspa error warning
     description: ''
     trigger:
     - platform: numeric_state
-      entity_id: sensor.spa_error
+      entity_id: sensor.layzspa_error
       above: '0'
     condition: []
     action:
@@ -12,3 +14,14 @@ automation:
       data:
         message: Pump error {{ trigger.state }}
     mode: single
+
+sensor:
+  - platform: mqtt
+    name: Layzspa Error
+    unique_id: sensor.layzspa_error
+    state_topic: "layzspa/message"
+    value_template: "{{ value_json.ERR }}"
+    expire_after: 700
+    availability_topic: "layzspa/Status"
+    payload_available: "Alive"
+    payload_not_available: "Dead"
