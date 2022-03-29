@@ -1,3 +1,16 @@
+input_number:
+  spa_target_temp:
+    name: Spa target temp
+    min: 20
+    max: 40
+    step: 1
+    unit_of_measurement: °C
+    icon: mdi:thermometer
+    
+input_boolean:
+  spa_target_update_lock:
+    name: Spa target update lock
+
 automation:
   - id: 'stop pump at target temp'
     alias: SPA-stoppa pump vid rätt temperatur
